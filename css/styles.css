@@ -342,7 +342,6 @@ color: var(--white-color);
     justify-content: flex-start;
     align-items: center;
     gap: 15px;
-    margin-bottom: 40px;
 }
 
 .text-section-row h2 {
@@ -553,7 +552,6 @@ color: var(--white-color);
     justify-content: flex-start;
     align-items: center;
     gap: 15px;
-    margin-bottom: 20px;
 }
 
   .text-section-equipo h2 {
@@ -876,13 +874,17 @@ footer .container-footer .contact .info li a:hover{
         grid-template-columns: 1fr;
         grid-gap: 50px;
     }
-    .row .imgWrapper{
+    .row .image-section-row{
         position: relative;
         align-items: center;
+        display: block;
         padding: 0;
     }
     .row .contentWrapper{
         padding-left: 0px ;
+    }
+    .content-equipo{
+        grid-template-columns: 1fr;
     }
 }   
 
@@ -890,10 +892,18 @@ footer .container-footer .contact .info li a:hover{
 @media (max-width: 760px) {
     .row {
         width: 90%;
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
     }
     .row .contentWrapper h2{
         font-size: 30px ;
         padding-bottom: 20px ;
+    }
+
+    .row .image-section-row{
+        display: block;
+        padding: 0;
     }
 
     .row .contentWrapper p{
@@ -906,6 +916,12 @@ footer .container-footer .contact .info li a:hover{
 
     .sliderWrapper .swiper-slide-button{
         display: none;
+    }
+
+    .content-equipo {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
     }
 
     footer{
@@ -942,10 +958,18 @@ footer .container-footer .contact .info li a:hover{
     }
 
     .row{
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
         padding: 20px;
     }
-    .row .contentWrapper span.textWrapper {
+
+    .row .contentWrapper{
+        padding: 0px;
+    }
+    .row .contentWrapper span .textWrapper {
         font-size: 18px;
+        margin: 0;
     }
 
     .row .contentWrapper h2{
@@ -962,6 +986,50 @@ footer .container-footer .contact .info li a:hover{
         padding: 5px 5px;
     }
 
+    .container-equipo {
+        padding: 20px;
+    }
+
+    .content-equipo {
+        padding: 20px;
+    }
+
+    .text-section-equipo {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .text-section-equipo h2 {
+        font-size: 30px;
+    }
+
+    .text-section-equipo p {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .button-equipo {
+        font-size: 11px;
+        padding: 8px 12px;
+    }
+
+    .image-section-equipo img {
+        max-width: 100%;
+    }
+
+    .section-horarios, .section-content {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .title, .subtitle {
+        font-size: 18px;
+    }
+
+    .subtitle {
+        font-size: 40px;
+    }
+
     footer .container-footer {
         width: 100%;
         display: grid;
@@ -974,4 +1042,7 @@ footer .container-footer .contact .info li a:hover{
         line-height: 1.2em;
     }
 }
+
+  
+
 
