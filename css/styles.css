@@ -814,11 +814,29 @@ footer .container-footer .contact .info li a:hover{
 
 /* AGENDE SU CLASE DE PRUEBA */
 
+.section-image {
+    width: 100%;
+    height: auto; /* Ajusta la altura según tus necesidades */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.section-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7)
+}
+
 .section-form {
     background-color: var(--white-color);
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 50px;
 }
 
 .form-container {
@@ -912,7 +930,6 @@ select {
     margin-bottom: 16px;
 }
 
-
 button#send {
     position: flex;
     align-content: center;
@@ -934,6 +951,130 @@ button#send:hover {
     border: 2px solid var(--primary-color);
     transition: 0.3s ease;
   }
+
+  /* CONTACTO */
+
+  .hero-section-contact {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background: url(../img/todos_byn.JPG) no-repeat center center/cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content-contact {
+    position: absolute;
+    top: 50%;
+    left: 100px; /* Ajuste la posición a la izquierda */
+    transform: translateY(-50%);
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.hero-content-contact h1, .hero-content-contact p {
+    margin: 0;
+}
+
+.hero-content-contact p{
+    font-size: 40px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-style: italic;
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    color: var(--white-color);
+}
+
+.hero-content-contact h1{
+    font-size: 70px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--secundary-color);
+    text-align: center;
+}
+
+.contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 80px 80px 100px;
+    background: var(--white-color);
+}
+
+.contact-info, .contact-form {
+    flex: 1;
+    padding: 20px;
+}
+
+.contact-info {
+    max-width: 50%;
+}
+
+.contact-form {
+    max-width: 50%;
+}
+
+.contact-info h2, .contact-form h2 {
+    margin-top: 0;
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    font-size: 16px;
+}
+
+.contact-list li {
+    margin-bottom: 0px;
+    line-height: 2em;
+}
+
+.contact-list i {
+    margin-right: 10px;
+}
+
+.contact-info .contact-hours p{
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.contact-form label {
+    display: block;
+}
+
+.contact-form input, .contact-form textarea, .contact-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.maps-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.map {
+    flex: 1;
+    margin: 10px;
+}
+
+.map h3{
+    font-size: 20px;
+    color: var(--white-color);
+}
+
+.map iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+}
+
 
 @media (max-width: 1040px) {
 

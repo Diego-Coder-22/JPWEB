@@ -63,27 +63,26 @@ const swiper = new Swiper('.swiper', {
 });
 
 //FORMULARIO AGENDE SU CLASE//
+  // Función para enviar datos a WhatsApp
+  document.addEventListener('DOMContentLoaded', function () {
+    // Función para enviar datos a WhatsApp
+    function sendToWhatsApp(formId, phoneNumber, baseUrl) {
+        const form = document.getElementById(formId);
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = document.getElementById(`${formId}-name`).value;
+            const email = document.getElementById(`${formId}-email`).value;
+            const phone = document.getElementById(`${formId}-phone`).value;
+            const message = document.getElementById(`${formId}-message`).value;
+            const subject = document.getElementById(`${formId}-subject`) ? document.getElementById(`${formId}-subject`).value : '';
 
-document.getElementById("whatsappButton").addEventListener("click", function(event) {
-  event.preventDefault();
+            const url = `${baseUrl}?phone=${encodeURIComponent(phoneNumber)}&text=${encodeURIComponent(`Nombre: ${name}\nEmail: ${email}\nTelefono: ${phone}\nMensaje: ${message}\nAsunto: ${subject}`)}`;
 
-  // Captura los datos del formulario
-  let name = document.getElementById("name").value;
-  let email = document.getElementById("email").value;
-  let phone = document.getElementById("phone").value;
-  let message = document.getElementById("message").value;
-  let option = document.getElementById("option").value;
+            window.open(url, '_blank');
+        });
+    }
 
-  // Número de WhatsApp al que enviarás el mensaje (con código de país, sin espacios ni guiones)
-  let phoneNumber = "+34652768245"; // Reemplaza con el número de destino
-
-  // Construye el mensaje de WhatsApp
-  let whatsappMessage = `Nombre: ${name}%0ACorreo: ${email}%0ATeléfono: ${phone}%0AOpción seleccionada: ${option}%0AMensaje: ${message}`;
-
-  // Construye el enlace de WhatsApp
-  let whatsappURL = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
-
-  // Abre el enlace de WhatsApp
-  window.open(whatsappURL, "_blank");
+    // Aplicar a los formularios
+    sendToWhatsApp('contact-form', '+34658104482', 'https://wa.me/+34658104482');
 });
 

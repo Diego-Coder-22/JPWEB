@@ -8,10 +8,10 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
         <link rel="stylesheet" href="../css/styles.css">
         <link rel="icon" href="../img/favicon-jp.svg" type="image/x-icon">
-        <title>JP Campos - Jiu Jitsu Brasileño</title>
+        <title>JP Campos - Agendar</title>
     </head>
     <body>
-        <!-- Navbar-->
+<!-- Navbar-->
         <header>
                 <a class="logo" href="../index.html"><img src="../img/logo-jp-01.svg" alt="JP Campos Logo"></a>
                 <button id="abrir" class="abrir-menu"><i class="fa-solid fa-bars"></i></button>
@@ -25,7 +25,7 @@
                             <a class="nav-link" href="#">ACADEMIAS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">CONTACTO</a>
+                            <a class="nav-link" href="./contacto.html">CONTACTO</a>
                         </li>
                         <li class="nav-item">
                             <a class="btn-navbar" href="#">AGENDE SU CLASE</a>
@@ -33,7 +33,14 @@
                     </ul>
                 </nav>
         </header>
-        <!-- Navbar End-->
+<!-- Navbar End-->
+<!-- Image Section -->
+<section class="section-image">
+    <img src="../img/bjj-27.jpg" alt="Equipo">
+</section>
+<!-- End Image Section -->
+
+<!-- Form Section -->
     <section class="section-form">
         <div class="form-container">
             <h1>agende su clase</h1>
@@ -41,32 +48,33 @@
             <p>Únete para una experiencia de vida inolvidable.</p>
     
             <!-- Botón de WhatsApp -->
-            <a href="https://wa.me/tu-numero?text=Quiero unirme a la experiencia de vida inolvidable" target="_blank" class="whatsapp-button"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a>
+            <a href="https://wa.me/+34658104482?text=Me pongo en contacto contigo" target="_blank" class="whatsapp-button"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a>
     
             <!-- Formulario -->
-        <form id="contact-form" action="process-form.php" method="POST">
-            <div>
-                <input type="text" id="name" name="name" placeholder="Nombre" required>
-            </div>
-            <div>
-                <input type="email" id="email" name="email" placeholder="Email" required>
-            </div>
-            <div>
-                <input type="tel" id="phone" name="phone" placeholder="Telefono" required>
-            </div>
-            <div>
-                <textarea id="message" name="message" rows="4" placeholder="Mensaje" required></textarea>
-            </div>
-            <div>
-                <select id="option" name="option" required>
-                    <option value="" disabled selected>Selecciona una opción</option>
-                    <option value="jiu_jitsu_adulto_ya_entreno">Jiu Jitsu Adulto, ya entreno en otro equipo.</option>
-                    <option value="jiu_jitsu_adulto_iniciante">Jiu Jitsu Adulto, soy iniciante y quiero aprender.</option>
-                    <option value="jiu_jitsu_infantil">Jiu Jitsu Infantil, quiero conocer el Jiu Jitsu.</option>
-                </select>
-            </div>
-                <button type="button" id="send">Enviar</button>
+            <form id="contact-form" action="process-form.php" method="POST">
+                <div>
+                    <input type="text" id="contact-form-name" name="name" placeholder="Nombre" required>
+                </div>
+                <div>
+                    <input type="email" id="contact-form-email" name="email" placeholder="Email" required>
+                </div>
+                <div>
+                    <input type="tel" id="contact-form-phone" name="phone" placeholder="Telefono" required>
+                </div>
+                <div>
+                    <textarea id="contact-form-message" name="message" rows="4" placeholder="Mensaje" required></textarea>
+                </div>
+                <div>
+                    <select id="contact-form-subject" name="subject" required>
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="jiu_jitsu_adulto_ya_entreno">Jiu Jitsu Adulto, ya entreno en otro equipo.</option>
+                        <option value="jiu_jitsu_adulto_iniciante">Jiu Jitsu Adulto, soy iniciante y quiero aprender.</option>
+                        <option value="jiu_jitsu_infantil">Jiu Jitsu Infantil, quiero conocer el Jiu Jitsu.</option>
+                    </select>
+                </div>
+                <button type="submit" id="send">Enviar</button>
             </form>
+            
         </div>
     </section>
 <!-- Footer Start -->
@@ -87,7 +95,7 @@
                 <li><a href="#">FAQ</a></li>
                 <li><a href="#">Politicas</a></li>
                 <li><a href="#">Ayuda</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
             </ul>
         </div>
         <div class="sec quicklinks">
@@ -103,7 +111,7 @@
             <h2>Contacto</h2>
             <ul class="info">
                 <li>
-                    <span><i class="fa-brands fa-whatsapp"></i></span><p><a href="https://wa.me/34000000000" target="_blank">+34 000 000 000</a></p>
+                    <span><i class="fa-brands fa-whatsapp"></i></span><p><a href="https://wa.me/34000000000" target="_blank">+34 658 10 44 82</a></p>
                     <span><i class="fa-regular fa-envelope"></i></span><p><a href="mailto:"> juanpedro-_-90@hotmail.com</a></p>
                 </li>
             </ul>
