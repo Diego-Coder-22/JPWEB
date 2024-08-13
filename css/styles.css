@@ -1151,6 +1151,46 @@ button#send:hover {
     .content-equipo{
         grid-template-columns: 1fr;
     }
+
+    .section-image {
+        padding: 30px;
+    }
+
+    .section-form {
+        padding: 30px;
+    }
+
+    .form-container {
+        max-width: 350px;
+    }
+
+    .form-container h1 {
+        font-size: 26px;
+    }
+
+    .form-container h2 {
+        font-size: 40px;
+    }
+
+    .hero-content-contact {
+        left: 50px; /* Ajuste la posición a la izquierda en pantallas más pequeñas */
+    }
+
+    .hero-content-contact h1 {
+        font-size: 60px;
+    }
+
+    .hero-content-contact p {
+        font-size: 35px;
+    }
+
+    .contact-section {
+        padding: 60px 40px 80px;
+    }
+
+    .contact-info, .contact-form {
+        max-width: 100%;
+    }
 }   
 
 
@@ -1189,6 +1229,73 @@ button#send:hover {
         align-items: center; 
     }
 
+    .section-image {
+        padding: 20px;
+    }
+
+    .section-form {
+        padding: 20px;
+    }
+
+    .form-container {
+        max-width: 300px;
+    }
+
+    .form-container h1 {
+        font-size: 22px;
+    }
+
+    .form-container h2 {
+        font-size: 35px;
+    }
+
+    .form-container p {
+        font-size: 14px;
+    }
+
+    .form-container a {
+        width: 50%;
+    }
+
+    .hero-content-contact {
+        left: 20px; /* Ajuste la posición a la izquierda en pantallas más pequeñas */
+        text-align: center;
+    }
+
+    .hero-content-contact h1 {
+        font-size: 45px;
+    }
+
+    .hero-content-contact p {
+        font-size: 28px;
+    }
+
+    .contact-section {
+        padding: 40px 20px 60px;
+        flex-direction: column;
+    }
+
+    .contact-info, .contact-form {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .contact-info h2, .contact-form h2 {
+        font-size: 24px;
+    }
+
+    .contact-list {
+        font-size: 14px;
+    }
+
+    .contact-info .contact-hours p {
+        font-size: 16px;
+    }
+
+    .map iframe {
+        height: 250px;
+    }
+
     footer{
         padding: 40px;
     }
@@ -1207,15 +1314,18 @@ button#send:hover {
     .home .content h1{
         font-size: 40px;
         line-height: 1.2em;
+        margin: 0;
     }
 
     .home .content p{
+        font-size: 18px;
         line-height: 1.2em;
+        margin-bottom: 12px;
     }
 
     .home .content h1 span{
-        font-size: 32px;
-        line-height: 1.2em;
+        font-size: 18px;
+        line-height: .2em;
     }
 
     .sectionRow{
@@ -1293,6 +1403,92 @@ button#send:hover {
 
     .subtitle {
         font-size: 40px;
+    }
+
+    .section-image {
+        padding: 10px;
+    }
+
+    .section-image img {
+        height: auto;
+    }
+
+    .section-form {
+        padding: 15px;
+    }
+
+    .form-container {
+        max-width: 100%;
+    }
+
+    .form-container h1 {
+        font-size: 20px;
+    }
+
+    .form-container h2 {
+        font-size: 28px;
+    }
+
+    .form-container p {
+        font-size: 12px;
+    }
+
+    .form-container a {
+        width: 100%;
+    }
+
+    .whatsapp-button {
+        width: 100%;
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    button#send {
+        width: 100%;
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .hero-section-contact {
+        height: 300px;
+    }
+
+    .hero-content-contact {
+        left: 10px;
+        text-align: center;
+    }
+
+    .hero-content-contact h1 {
+        font-size: 35px;
+    }
+
+    .hero-content-contact p {
+        font-size: 20px;
+    }
+
+    .contact-section {
+        padding: 20px 10px;
+    }
+
+    .contact-info h2, .contact-form h2 {
+        font-size: 20px;
+    }
+
+    .contact-list {
+        font-size: 12px;
+    }
+
+    .contact-info .contact-hours p {
+        font-size: 14px;
+    }
+
+    .map {
+        flex: 1 1 100%; /* Asegura que los mapas ocupen el 100% del ancho disponible y se apilen verticalmente */
+        margin: 5px 0; /* Añade un margen superior e inferior para separación */
+    }
+
+    .map iframe {
+        height: 150px; /* Ajusta la altura del iframe para pantallas pequeñas */
     }
 
     footer .container-footer {
