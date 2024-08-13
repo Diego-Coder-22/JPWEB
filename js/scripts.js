@@ -13,7 +13,7 @@ cerrar.addEventListener("click", () => {
 
 });
 
-//video slider
+//video slider//
 
 const btns =document.querySelectorAll(".nav-btn");
 const sliders =document.querySelectorAll(".video-slide");
@@ -37,7 +37,7 @@ btns.forEach ((btn,i) =>{
   });
 });
 
-// Slider
+// Slider //
 const swiper = new Swiper('.swiper', {
   loop: true,
   navigation: {
@@ -61,3 +61,29 @@ const swiper = new Swiper('.swiper', {
     },
   }
 });
+
+//FORMULARIO AGENDE SU CLASE//
+
+document.getElementById("whatsappButton").addEventListener("click", function(event) {
+  event.preventDefault();
+
+  // Captura los datos del formulario
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let phone = document.getElementById("phone").value;
+  let message = document.getElementById("message").value;
+  let option = document.getElementById("option").value;
+
+  // Número de WhatsApp al que enviarás el mensaje (con código de país, sin espacios ni guiones)
+  let phoneNumber = "+34652768245"; // Reemplaza con el número de destino
+
+  // Construye el mensaje de WhatsApp
+  let whatsappMessage = `Nombre: ${name}%0ACorreo: ${email}%0ATeléfono: ${phone}%0AOpción seleccionada: ${option}%0AMensaje: ${message}`;
+
+  // Construye el enlace de WhatsApp
+  let whatsappURL = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+
+  // Abre el enlace de WhatsApp
+  window.open(whatsappURL, "_blank");
+});
+
