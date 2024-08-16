@@ -13,6 +13,24 @@ cerrar.addEventListener("click", () => {
 
 });
 
+// Mostrar u ocultar el botón cuando se desplaza la página
+window.onscroll = function() {
+  const btn = document.getElementById("backToTopBtn");
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      btn.style.display = "block";
+  } else {
+      btn.style.display = "none";
+  }
+};
+
+// Desplazar suavemente hacia arriba cuando se hace clic en el botón
+document.getElementById("backToTopBtn").onclick = function() {
+  window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+  });
+};
+
 //video slider//
 
 const btns =document.querySelectorAll(".nav-btn");
