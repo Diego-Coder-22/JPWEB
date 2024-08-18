@@ -1271,6 +1271,123 @@ button#send:hover {
 
 /* END PROGRAMAS */
 
+/* PROGRAMA INICIANTES */
+
+.container-program {
+    max-width: 100%;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: var(--primary-color);
+    justify-content: center;
+}
+
+.container-program h2 {
+    font-size: 30px;
+    font-weight: 200;
+    text-transform: uppercase;
+    font-style: italic;
+    gap: 15px;
+    color: var(--white-color);
+    text-align: center;
+}
+
+.container-program h5 {
+    font-size: 70px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--secundary-color);
+    text-align: center;
+}
+
+.container-program p {
+    line-height: 1.6;
+    margin: 20px;
+    font-size: 16px;
+    text-align: center;
+    color: var(--white-color);
+}
+
+/* Grid layout for flip boxes */
+.flip-box-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 50px;
+}
+
+.flip-box {
+    background-color: var(--primary-color);
+    width:100%;
+    perspective: 1000px;
+    border-radius: 15px;
+    gap: 10px;
+}
+
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-box-front {
+    background-color: var(--secundary-color);
+    color: var(--white-color);
+    border: 1px solid var(--secundary-color);
+    border-radius: 15px;;
+}
+
+.flip-box-front h3{
+    color: var(--white-color);
+    font-size: 21px;
+}
+
+.flip-box-back {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    transform: rotateY(180deg);
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid var(--white-color);
+    border-radius: 15px;
+}
+
+.flip-box-back h3{
+    font-size: 18px;
+}
+
+.flip-box-back p{
+    font-size: 14px;
+    color: var(--primary-color);
+}
+
+.icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: var(--white-color);
+}
+
+
+
 
 @media (max-width: 1040px) {
 
