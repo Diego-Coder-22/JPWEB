@@ -108,11 +108,11 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 32px;
+    padding: 12px 28px 2px 28px;
 }
 
 .logo img{
-    height: 40px;
+    height: 35px;
 }
 
 .hamburger{
@@ -136,7 +136,7 @@ header {
     font-weight: 400;
     text-decoration: none; /* Asegúrate de que los enlaces no tengan subrayado por defecto */
     position: relative;
-    padding: 5px 0; /* Añadido espacio para el subrayado */
+    padding: 1px 0; /* Añadido espacio para el subrayado */
 }
 
 .nav-link::before {
@@ -191,7 +191,7 @@ section{
 .home{
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -428,7 +428,7 @@ color: var(--white-color);
 /* Estilos para el slider */
 .sectionSlider {
     width: 100%;
-    min-height: 100vh;
+    min-height: 80vh;
     background-color: var(--primary-color);
 }
 
