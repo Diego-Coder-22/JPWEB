@@ -1386,7 +1386,188 @@ button#send:hover {
     color: var(--white-color);
 }
 
+/* Niños y adolescentes */
 
+.programs-text p{
+    margin: 5px;
+    padding-bottom: 10px;
+}
+
+.container-text {
+    position: relative;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.container-text h3{
+    position: relative;
+    color: var(--white-color);
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    z-index: 2;
+}
+
+.container-text span {
+    position: relative;
+    color: var(--secundary-color);
+    font-size: 2.5rem;
+    z-index: 2;
+}
+
+/* Estilo de los íconos y listas */
+.widget-icono-lista {
+    margin: 20px 0;
+}
+
+.widget-icono-lista ul {
+    list-style: none;
+    padding: 0;
+}
+.widget-icono-lista ul p{
+    list-style: none;
+    padding: 0;
+    margin: 0px;
+}
+
+.widget-icono-lista li {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.widget-icono-lista li span {
+    font-size: 24px;
+    font-weight: 600;
+    padding: 0px;
+}
+
+/* Estilos para el botón de descarga */
+.download-button-container {
+    text-align: center; /* Centra el botón dentro del contenedor */
+    padding-bottom: 25px;
+    background-color: var(--white-color);
+}
+
+.container-kids {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px 100px 40px;
+    background-color: var(--white-color);
+}
+
+.section-kids {
+    padding: 20px;
+    border-radius: 12px;
+    color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#comportamento {
+    background-color: #5e5e5e; /* Gris */
+    padding: 35px 25px;
+}
+
+#relacionamento {
+    background-color: #fff200; /* Amarillo */
+    padding: 35px 25px;
+}
+
+#organizacao {
+    background-color: #f5a92f; /* Naranja */
+    padding: 35px 25px;
+}
+
+#comprometimento {
+    background-color: #008b17; /* Verde */
+    padding: 35px 25px;
+}
+
+.section-kids h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--white-color);
+    font-weight: 800;
+}
+
+.section-kids h4 {
+    font-size: 14px;
+    color: var(--white-color);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.section-kids ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.section-kids ul li {
+    font-size: 12px;
+    font-style: italic;
+    margin-bottom: 0px;
+    padding-left: 20px;
+    position: relative;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+.section-kids ul li::before {
+    content: '- ';
+    color: var(--white-color);
+    position: center;
+    left: 0;
+    font-size: 12px;
+    line-height: 1;
+}
+
+
+#relacionamento h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    font-weight: 800;
+}
+
+#relacionamento h4 {
+    font-size: 14px;
+    color: #f4f4f4;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+#relacionamento ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#relacionamento ul li {
+    font-size: 12px;
+    font-style: italic;
+    margin-bottom: 0px;
+    padding-left: 20px;
+    position: relative;
+    line-height: 22px;
+    color: var(--primary-color);
+}
+
+#relacionamento ul li::before {
+    content: '- ';
+    color: var(--white-color);
+    position: center;
+    left: 0;
+    font-size: 12px;
+    line-height: 1;
+    color: var(--primary-color);
+}
 
 
 @media (max-width: 1040px) {

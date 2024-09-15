@@ -104,3 +104,15 @@ const swiper = new Swiper('.swiper', {
     sendToWhatsApp('contact-form', '+34658104482', 'https://wa.me/+34658104482');
 });
 
+const typed = new Typed(".multiple",{
+  strings:["MÁS CONFIADO",
+  "RESILIENTE",
+  "MÁS RESPETUOSO",
+  "DISCIPLINADO",
+  "CINTURÓN NEGRO"],
+  typeSpeed:100,
+  backSpeed:100,
+  backDelay:1000,
+  loop:true,
+})
+
