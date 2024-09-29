@@ -1569,6 +1569,57 @@ button#send:hover {
     color: var(--primary-color);
 }
 
+/* ACADEMIAS */
+
+/* Contenedor de cada sección de academias */
+.programs-item-academias {
+    margin: 20px auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+/* Contenido de academias: texto e imágenes */
+.programs-content-academias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.programs-text .textWrapper-academias {
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-style: italic;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--white-color);
+    gap: 15px;
+}
+
+/* Contenedor de imágenes de academias */
+.image-academias {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 20px;
+}
+
+/* Estilo para cada imagen de academia */
+.image-academia {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+}
+
+/* Efecto hover en imágenes */
+.image-academia:hover {
+    transform: scale(1.1);
+}
+
+
 
 @media (max-width: 1040px) {
 
@@ -1824,6 +1875,44 @@ button#send:hover {
         padding: 6px;
     }
 
+    .programs-container {
+        height: 250px; /* Reducción de la altura */
+        padding: 20px; /* Reducción del padding */
+    }
+
+    .programs-header h3 {
+        font-size: 25px; /* Reducción del tamaño de fuente */
+    }
+
+    .programs-header h2 {
+        font-size: 40px; /* Reducción del tamaño de fuente */
+    }
+
+    .programs-description p {
+        font-size: 13px; /* Reducción del tamaño de fuente */
+    }
+
+    .programs-text .textWrapper {
+        font-size: 18px; /* Reducción del tamaño de fuente */
+    }
+
+    .programs-text h2 {
+        font-size: 35px; /* Reducción del tamaño de fuente */
+    }
+
+    .program-button {
+        font-size: 12px; /* Reducción del tamaño de la fuente del botón */
+        padding: 5px 8px; /* Ajuste del padding */
+    }
+
+    .programs-item {
+        padding: 0 15px; /* Reducción del padding */
+    }
+
+    .programs-text {
+        padding: 20px; /* Ajuste del padding interno del texto */
+    }
+
     .home .content h1{
         font-size: 40px;
         line-height: 1.2em;
@@ -1936,6 +2025,8 @@ button#send:hover {
 
     .form-container h1 {
         font-size: 20px;
+        justify-content: center;
+        text-align: center;
     }
 
     .form-container h2 {
@@ -2016,7 +2107,3 @@ button#send:hover {
         line-height: 1.2em;
     }
 }
-
-  
-
-
