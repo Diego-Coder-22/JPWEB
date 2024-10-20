@@ -345,29 +345,30 @@ color: var(--white-color);
     background-color: var(--white-color);
     padding: 50px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
 }
 
 .row {
     display: flex;
     flex-wrap: wrap;
     max-width: 1200px;
-    padding: 40px;
+    margin: 0 auto; 
 }
 
 .contentWrapper {
     flex: 1;
-    padding: 40px;
+    padding: 50px;
 }
 
+/* Estilos de texto */
 .text-section-row .textWrapper {
     font-size: 30px;
     font-weight: 400;
     text-transform: uppercase;
     font-style: italic;
     display: flex;
-    justify-content: flex-start;
+    justify-content: start;
     align-items: center;
     gap: 15px;
 }
@@ -377,16 +378,23 @@ color: var(--white-color);
     font-weight: 700;
     text-transform: uppercase;
     color: var(--secundary-color);
+    display: flex;
+    justify-content: start;
+    align-items: center;
     padding-bottom: 20px;
     text-shadow: 0px 0px 0px black;
 }
 
 .text-section-row p {
+    display: flex;
+    justify-content: start;
+    align-items: center;
     font-size: 16px;
     line-height: 25px;
     padding-bottom: 25px;
 }
 
+/* Estilos de botones */
 .button-row {
     font-size: 13px;
     letter-spacing: 2px;
@@ -406,6 +414,7 @@ color: var(--white-color);
     border: 2px solid var(--secundary-color);
 }
 
+/* Estilos de imágenes */
 .image-section-row {
     flex: 1;
     padding: 20px;
@@ -415,14 +424,18 @@ color: var(--white-color);
 }
 
 .image-section-row img {
-    max-width: 100%;
-    height: auto;
-    filter: brightness(0.7);
+    max-width: 100%; /* La imagen no puede exceder el ancho del contenedor */
+    height: auto; /* Mantiene la proporción */
+    min-width: 345px; /* Establece un ancho mínimo */
+    min-height: 200px; /* Establece una altura mínima opcional */
+    object-fit: contain; /* Mantiene la relación de aspecto sin recortar la imagen */
+    filter: brightness(0.7); /* Filtro inicial */
+    transition: transform 0.3s, filter 0.3s; /* Transiciones para las imágenes */
 }
 
 .image-section-row img:hover {
     transform: scale(1.1);
-    transition: 0.3s;
+    filter: brightness(1); /* Devuelve el brillo a normal al pasar el ratón */
 }
 
 /* Estilos para el slider */
@@ -626,9 +639,13 @@ color: var(--white-color);
   }
   
   .image-section-equipo img {
-    max-width: 100%;
-    height: auto;
-    filter: brightness(0.7)
+    max-width: 100%; /* La imagen no puede exceder el ancho del contenedor */
+    height: auto; /* Mantiene la proporción */
+    min-width: 345px; /* Establece un ancho mínimo */
+    min-height: 200px; /* Establece una altura mínima opcional */
+    object-fit: contain; /* Mantiene la relación de aspecto sin recortar la imagen */
+    filter: brightness(0.7); /* Filtro inicial */
+    transition: transform 0.3s, filter 0.3s; /* Transiciones para las imágenes */
   }
 
   .image-section-equipo img:hover {
@@ -1049,6 +1066,7 @@ button#send:hover {
     margin-top: 0;
     font-size: 32px;
     text-transform: uppercase;
+    color: var(--secundary-color);
 }
 
 .contact-list {
@@ -1064,6 +1082,7 @@ button#send:hover {
 
 .contact-list i {
     margin-right: 10px;
+    color: var(--secundary-color);
 }
 
 .contact-info .contact-hours p{
@@ -1107,9 +1126,8 @@ button#send:hover {
 
 .programs-container {
     width: 100%;
-    height: 400px;
+    height: auto; /* Cambiar a auto */
     background: url(../img/bjj-27\ -\ copia.jpg) no-repeat center center/cover;
-    object-fit: cover;
     padding: 50px;
     color: var(--white-color);
     text-align: left;
@@ -1142,7 +1160,7 @@ button#send:hover {
 }
 
 .programs-description p {
-    width: 80%;
+    max-width: 80%;
     margin-bottom: 30px;
     line-height: 1.6;
     font-size: 16px;
@@ -1153,12 +1171,17 @@ button#send:hover {
     flex-wrap: wrap;
     justify-content: flex-start;
     list-style-type: none;
+    overflow-x: hidden; /* Cambiar a hidden para evitar scroll horizontal */
     padding: 0;
     margin: 0;
+    border: none; /* Elimina bordes */
+    box-shadow: none; /* Elimina sombras */
 }
 
 .programs-list li {
     flex: 1;
+    border: none; /* Elimina bordes en los elementos de la lista */
+    line-height: 1.2;
 }
 
 .programs-list a {
@@ -1186,92 +1209,148 @@ button#send:hover {
     color:var(--white-color);
 }
 
+
+/* Contenedor General */
+.sectionRow-programs {
+    background-color: var(--white-color);
+    padding: 50px 0;
+}
+
+/* Estructura de las filas de programas */
+.row-programs {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
+    gap: 30px; /* Espacio entre los elementos */
+}
+
+/* Cada item del programa */
 .programs-item {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:var(--white-color);
-    padding: 0 40px ;
-  }
-  
-  .programs-content {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    padding: 0 40px;
-  }
-  
-  .programs-text {
-    flex: 1;
-    padding: 40px;
-  }
+    align-items: center; /* Alinea los elementos al centro verticalmente */
+    justify-content: space-between; /* Asegura que la imagen y el texto estén separados */
+    gap: 20px; /* Espacio entre la imagen y el texto */
+    flex-wrap: wrap; /* Permite que se ajusten los elementos si no hay espacio */
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: var(--white-color); /* Fondo blanco para los items */
+}
 
-  .programs-text .textWrapper {
+/* Ajuste de imágenes */
+.image-programs-row {
+    flex: 1 1 45%; /* Asigna 45% del ancho al contenedor de la imagen */
+    min-width: 300px; /* Asegura un tamaño mínimo para pantallas pequeñas */
+}
+
+.programs-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen ocupe todo el espacio manteniendo la relación de aspecto */
+    border-radius: 8px;
+    filter: brightness(0.7); /* Filtro inicial */
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.programs-image:hover {
+    transform: scale(1.05); /* Efecto de zoom */
+    filter: brightness(1);
+}
+
+
+/* Ajuste del contenido de texto */
+.contentWrapper-programs {
+    flex: 1 1 50%; /* Asigna 50% del ancho al contenido de texto */
+    padding: 20px;
+}
+
+.text-programs-row .textWrapper-programs {
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.text-programs-row h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--secundary-color);
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.text-programs-row p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* END PROGRAMAS */
+
+
+
+/* CLASES */
+
+.clases-item {
+    display: grid; /* Usar grid para estructurar el contenido */
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
+    align-items: center; /* Alinea verticalmente el contenido */
+    justify-items: center; /* Centra horizontalmente cada ítem en la cuadrícula */
+    gap: 20px; /* Espacio entre elementos */
+    padding: 100px 40px; /* Espaciado vertical y horizontal */
+    box-sizing: border-box;
+    background-color: var(--white-color); /* Fondo blanco para los items */
+    width: 100%; /* Ancho completo */
+    min-height: 100vh; /* Asegura que el contenedor ocupe al menos la altura de la ventana */
+}
+
+.clases-content {
+    display: contents; /* Permite que los elementos internos tomen el lugar en la cuadrícula */
+}
+
+.text-clases-row {
+    text-align: left; /* Alinear texto a la izquierda */
+    padding: 40px; /* Espaciado interno */
+}
+
+.text-clases-row .textWrapper-clases {
     font-size: 30px;
     font-weight: 400;
     text-transform: uppercase;
     font-style: italic;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
     color: var(--primary-color);
-    gap: 15px;
 }
 
-  .programs-text h2 {
-    font-size: 50px;
+.text-clases-row h2 {
+    font-size: 70px;
     font-weight: 700;
-    text-transform: uppercase;
     color: var(--secundary-color);
-  }
-  
-  .programs-text p {
-    font-size: 16px;
-    line-height: 25px;
-    padding-bottom: 25px;
-  }
-  
-  .program-button {
-    font-size: 13px;
-    letter-spacing: 2px;
-    padding: 5px 10px;
-    display: inline-block;
-    text-decoration: none;
     text-transform: uppercase;
-    background: var(--white-color);
+    margin-bottom: 15px;
+}
+
+.text-clases-row p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
     color: var(--primary-color);
-    border: 2px solid var(--primary-color);
-    user-select: none;
-  }
-  
-  .program-button:hover {
-    background: var(--secundary-color);
-    color: var(--white-color);
-    border: 2px;
-    border: 2px solid var(--secundary-color);
-  }
-  
-  .image-programs {
-    flex: 1;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .image-programs img {
-    max-width: 100%;
-    height: auto;
-    filter: brightness(0.7)
-  }
+}
 
-  .image-programs img:hover {
-    transition: 0.3s;
-  }
+.image-clases-row {
+    justify-self: center; /* Centra la imagen en su celda */
+    max-width: 600px; /* Controla el tamaño máximo de la imagen */
+}
 
-/* END PROGRAMAS */
+.image-clases-row img {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
+    filter: brightness(0.7); /* Filtro inicial */
+    transition: transform 0.3s, filter 0.3s;
+}
 
-/* PROGRAMA INICIANTES */
+.image-clases-row img:hover {
+    transform: scale(1.05); /* Efecto de zoom */
+    filter: brightness(1.);
+}
 
 .container-program {
     max-width: 100%;
@@ -1311,7 +1390,7 @@ button#send:hover {
 .flip-box-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 60px;
+    gap: 30px;
     justify-content: center;
     margin-bottom: 20px;
     padding: 50px;
@@ -1394,12 +1473,9 @@ button#send:hover {
 }
 
 .container-text {
-    position: relative;
-    height: 20vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
+    text-align: center; /* Centra el texto */
+    padding: 20px; /* Espaciado interno */
+    margin: 0 auto; /* Centra el contenedor en la página */
 }
 
 .container-text h3{
@@ -1408,7 +1484,9 @@ button#send:hover {
     text-transform: uppercase;
     font-size: 2.5rem;
     z-index: 2;
-}
+    line-height: 1.2; /* Espaciado entre líneas */
+    margin: 0; /* Elimina el margen por defecto */
+    }
 
 .container-text span {
     position: relative;
@@ -1601,22 +1679,22 @@ button#send:hover {
 .image-academias {
     display: flex;
     justify-content: center;
-    gap: 80px;
+    gap: 40px;
     margin-top: 20px;
 }
 
 /* Estilo para cada imagen de academia */
 .image-academia {
-    width: 50%;
+    width: 30%;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.5s ease;
+    transition: transform 0.3s ease;
 }
 
 /* Efecto hover en imágenes */
 .image-academia:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 
@@ -1686,19 +1764,62 @@ button#send:hover {
         right: 15px;
     }
 
-    .row{
-        grid-template-columns: 1fr;
-        grid-gap: 50px;
+    .contentWrapper {
+        padding: 10px; /* Espacio interno en los elementos de contenido */
     }
-    .row .image-section-row{
-        position: relative;
-        align-items: center;
-        display: block;
-        padding: 0;
+    .programs-header h3 {
+        font-size: 30px; /* Ajuste del tamaño de h3 */
     }
-    .row .contentWrapper{
-        padding-left: 0px ;
+
+    .programs-header h2 {
+        font-size: 50px; /* Ajuste del tamaño de h2 */
     }
+
+    .programs-description p {
+        max-width: 100%; /* Aumentamos el ancho del texto */
+        font-size: 14px; /* Disminuir el tamaño de fuente */
+        line-height: 1.5; /* Mejora la legibilidad */
+        padding: 0 10px; /* Añadir espaciado lateral */
+    }
+
+    /* Ajustes para la lista de programas */
+    .programs-list {
+        display: flex; /* Usar flexbox */
+        flex-wrap: wrap; /* Permitir que los elementos se vayan a otra línea */
+        overflow-x: hidden; /* Ocultar el scroll horizontal */
+        padding: 10px 0; /* Espaciado vertical para la lista */
+    }
+
+    .programs-list li {
+        flex: 0 0 auto; /* Cada elemento ocupa su tamaño natural */
+        margin-right: 10px; /* Espacio entre elementos */
+    }
+
+    .programs-list li:last-child {
+        margin-right: 0; /* Elimina el margen del último elemento */
+    }
+
+    .image-section-row {
+        width: 100%; /* Imagen ocupará todo el ancho en móviles */
+    }
+
+    .programs-image {
+        width: 100%; /* Asegura que las imágenes sean responsivas */
+        height: auto; /* Mantener proporciones de imagen */
+    }
+
+    .button-row {
+        width: 100%; /* Botones ocupan todo el ancho */
+        text-align: center; /* Centrar botones */
+    }
+
+    #backToTopBtn {
+        bottom: 20px; /* Mover botón un poco más arriba en móviles */
+        right: 20px; /* Mover botón un poco más a la izquierda */
+        width: 40px; /* Ajustar tamaño del botón */
+        height: 40px; /* Ajustar tamaño del botón */
+    }
+
     .content-equipo{
         grid-template-columns: 1fr;
     }
@@ -1742,15 +1863,97 @@ button#send:hover {
     .contact-info, .contact-form {
         max-width: 100%;
     }
+    .clases-content {
+        display: flex; /* Asegúrate de que el contenido esté en una fila */
+        flex-direction: column; /* Coloca el texto y la imagen en columnas */
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+
+    .image-clases-row img {
+        margin-top: 5px; /* Reduce el margen superior de la imagen */
+        width: 100%; /* Asegúrate de que la imagen se ajuste al contenedor */
+        max-width: 600px; /* Ajusta esto según sea necesario */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+    .clases-item {
+        grid-template-columns: 1fr; /* Cambia a una sola columna */
+        min-height: auto; /* Elimina la altura mínima */
+        padding: 50px 20px; /* Reducir espaciado en pantallas más pequeñas */
+    }
+
+    .text-clases-row {
+        text-align: center; /* Centrar texto en pantallas pequeñas */
+        padding: 20px; /* Reducir padding para centrar más el texto */
+        margin-bottom: 10px; /* Reduce el margen inferior del texto */
+    }
+
+    .text-clases-row h2 {
+        font-size: 40px; /* Ajuste del tamaño de h2 para pantallas más pequeñas */
+    }
+
+    .text-clases-row p {
+        font-size: 14px; /* Ajuste del tamaño de fuente para pantallas más pequeñas */
+    }
+
+    .image-clases-row {
+        justify-self: center; /* Centra la imagen en su celda */
+        max-width: 100%; /* Ajusta el ancho máximo a 100% */
+    }
+
+    .image-clases-row img {
+        width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+        height: auto; /* Mantiene la relación de aspecto */
+        object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
+        max-height: 300px; /* Ajustar altura máxima según sea necesario */
+    }
+
+    .container-text h3 {
+        font-size: 2rem; /* Tamaño de fuente más pequeño */
+    }
+
+    .container-kids {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en max 1040px */
+    }
 }   
 
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
 
     #backToTopBtn {
         bottom: 10px;
         right: 10px;
         padding: 7px;
+    }
+
+    .programs-header h3 {
+        font-size: 24px; /* Ajuste del tamaño de h3 en pantallas pequeñas */
+    }
+
+    .programs-header h2 {
+        font-size: 36px; /* Ajuste del tamaño de h2 en pantallas pequeñas */
+    }
+
+    .programs-description p {
+        font-size: 13px; /* Ajuste del tamaño de fuente en pantallas pequeñas */
+        line-height: 1.4; /* Mejorar legibilidad en pantallas pequeñas */
+    }
+
+    /* Ajustes para la lista de programas */
+    .programs-list {
+        display: flex; /* Usar flexbox para el diseño horizontal */
+        overflow-x: auto; /* Permitir scroll horizontal si es necesario */
+        padding: 10px 0; /* Espaciado vertical para la lista */
+        white-space: nowrap; /* Evitar que los elementos se envuelvan */
+    }
+
+    .programs-list li {
+        flex: 0 0 auto; /* Cada elemento ocupa su tamaño natural */
+        margin-right: 10px; /* Espacio entre elementos */
+        
+    }
+
+    .programs-list li:last-child {
+        margin-right: 0; /* Elimina el margen del último elemento */
     }
 
     .row {
@@ -1764,12 +1967,23 @@ button#send:hover {
         padding-bottom: 20px ;
     }
 
-    .row .image-section-row{
-        display: block;
-        padding: 0;
+    .row .image-section-row {
+        display: flex; /* Aseguramos que la fila se muestre como flex */
+        padding: 10px; /* Reducimos el padding para un mejor ajuste */
+        flex: 1 1 auto; /* Permite que la imagen ocupe el espacio disponible */
+    }
+    .row .image-section-row img {
+        max-width: 100%; /* Asegura que la imagen nunca exceda el ancho del contenedor */
+        height: auto; /* Mantiene la proporción */
+        min-height: 200px; /* Puedes ajustar esto según lo necesites */
+        min-width: 345px; /* Establece la anchura mínima a 345px */
+        object-fit: contain; /* Mantiene la relación de aspecto sin recortar la imagen */
     }
 
     .row .contentWrapper p{
+        display: flex;
+        justify-content: start;
+        align-items: center;
         line-height:24px ;
     }
 
@@ -1854,6 +2068,69 @@ button#send:hover {
         height: 250px;
     }
 
+    .row-programs {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column; /* Aseguramos que los items se apilen uno debajo de otro */
+    }
+
+    .programs-item {
+        display: flex;
+        flex-direction: column; /* Aseguramos que dentro de cada item, imagen y texto se alineen en columna */
+        margin-bottom: 20px; /* Añadimos un margen inferior entre items */
+    }
+
+    /* Especificamos que la imagen siempre va primero */
+    .programs-item .image-programs-row {
+        order: 1;
+        width: 100%; /* Hacemos que la imagen ocupe todo el ancho */
+        margin-bottom: 10px;
+    }
+
+    /* Aseguramos que el texto siga después */
+    .programs-item .contentWrapper-programs {
+        order: 2;
+        padding: 10px; /* Ajustamos el padding para que se vea más compacto en pantallas pequeñas */
+    }
+
+    .container-program h2 {
+        font-size: 24px; /* Tamaño más pequeño para el título */
+    }
+    
+    .container-program h5 {
+        font-size: 20px; /* Tamaño más pequeño para subtítulo */
+        margin-bottom: 10px; /* Espacio debajo del subtítulo */
+    }
+
+    .container-program p {
+        font-size: 12px; /* Tamaño más pequeño para el párrafo */
+        line-height: 1.4; /* Ajuste de línea */
+        padding: 0 10px; /* Espacio lateral reducido */
+    }
+
+    .clases-item h2 {
+        font-size: 24px; /* Tamaño más pequeño para el título de clases */
+    }
+
+    .clases-item p {
+        font-size: 12px; /* Tamaño más pequeño para el párrafo de clases */
+        line-height: 1.4; /* Ajuste de línea */
+        padding: 0 10px; /* Espacio lateral reducido */
+    }
+
+    .flip-box-container {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+        padding: 20px; /* Menos padding en pantallas pequeñas */
+    }
+
+    .flip-box-inner {
+        min-height: 280px; /* Altura mínima ajustada para pantallas pequeñas */
+    }
+
+    .container-text h3 {
+        font-size: 1.5rem; /* Aún más pequeño para dispositivos móviles */
+    }
+
     footer{
         padding: 40px;
     }
@@ -1863,7 +2140,8 @@ button#send:hover {
         display: grid;
         grid-template-columns: repeat(2,1fr);
         grid-gap: 40px;
-    }
+    }  
+
 
 }
 
@@ -1875,43 +2153,82 @@ button#send:hover {
         padding: 6px;
     }
 
-    .programs-container {
-        height: 250px; /* Reducción de la altura */
-        padding: 20px; /* Reducción del padding */
-    }
-
     .programs-header h3 {
-        font-size: 25px; /* Reducción del tamaño de fuente */
+        font-size: 20px; /* Ajuste del tamaño de h3 en pantallas muy pequeñas */
     }
 
     .programs-header h2 {
-        font-size: 40px; /* Reducción del tamaño de fuente */
+        font-size: 30px; /* Ajuste del tamaño de h2 en pantallas muy pequeñas */
     }
 
     .programs-description p {
-        font-size: 13px; /* Reducción del tamaño de fuente */
+        font-size: 10px; /* Ajuste del tamaño de fuente en pantallas muy pequeñas */
+        line-height: 1.4; /* Mejorar legibilidad en pantallas pequeñas */
+        margin-bottom: 10px;
+        padding: 0 5px; /* Espaciado lateral reducido */
+    }
+
+    /* Ajustes para la lista de programas */
+    .programs-list {
+        display: flex; /* Usar flexbox para el diseño horizontal */
+        overflow-x: auto; /* Permitir scroll horizontal si es necesario */
+        padding: 10px 0; /* Espaciado vertical para la lista */
+        white-space: nowrap; /* Evitar que los elementos se envuelvan */
+    }
+
+    .programs-list li {
+        flex: 0 0 auto; /* Cada elemento ocupa su tamaño natural */
+        margin-right: 5px; /* Espacio entre elementos reducido */
+    }
+
+    .programs-list li a{
+    font-size: 10px;
+    }
+
+    .programs-list li i{
+        font-size: 10px;
+    }
+
+    .programs-list li:last-child {
+        margin-right: 0; /* Elimina el margen del último elemento */
+    }
+    /* .programs-container {
+        height: 250px; 
+        padding: 20px; 
+    }
+
+    .programs-header h3 {
+        font-size: 25px; 
+    }
+
+    .programs-header h2 {
+        font-size: 40px; 
+    }
+
+    .programs-description p {
+        font-size: 13px; 
     }
 
     .programs-text .textWrapper {
-        font-size: 18px; /* Reducción del tamaño de fuente */
+        font-size: 18px; 
     }
 
     .programs-text h2 {
-        font-size: 35px; /* Reducción del tamaño de fuente */
+        font-size: 35px; 
     }
 
     .program-button {
-        font-size: 12px; /* Reducción del tamaño de la fuente del botón */
-        padding: 5px 8px; /* Ajuste del padding */
+        font-size: 12px; 
+        padding: 5px 8px; 
     }
 
     .programs-item {
-        padding: 0 15px; /* Reducción del padding */
+        padding: 0 15px;
     }
 
     .programs-text {
-        padding: 20px; /* Ajuste del padding interno del texto */
-    }
+        padding: 20px;
+    } */
 
     .home .content h1{
         font-size: 40px;
@@ -1973,7 +2290,6 @@ button#send:hover {
 
     .text-section-equipo {
         padding: 10px;
-        text-align: center;
     }
 
     .text-section-equipo h2 {
@@ -2095,6 +2411,39 @@ button#send:hover {
         height: 150px; /* Ajusta la altura del iframe para pantallas pequeñas */
     }
 
+    .container-program h2 {
+        font-size: 20px; /* Tamaño muy pequeño para el título */
+    }
+    
+    .container-program h5 {
+        font-size: 18px; /* Tamaño más pequeño para subtítulo */
+        margin-bottom: 5px; /* Espacio reducido debajo del subtítulo */
+    }
+
+    .container-program p {
+        font-size: 10px; /* Tamaño más pequeño para el párrafo */
+        line-height: 1.3; /* Ajuste de línea */
+        padding: 0 5px; /* Espacio lateral muy reducido */
+    }
+
+    .clases-item h2 {
+        font-size: 20px; /* Tamaño muy pequeño para el título de clases */
+    }
+
+    .clases-item p {
+        font-size: 10px; /* Tamaño más pequeño para el párrafo de clases */
+        line-height: 1.3; /* Ajuste de línea */
+        padding: 0 5px; /* Espacio lateral muy reducido */
+    }
+
+    .flip-box-inner {
+        min-height: 200px; /* Altura mínima ajustada para pantallas más pequeñas */
+    }
+
+    .container-text h3 {
+        font-size: 1.3rem; /* Tamaño más pequeño para pantallas extra pequeñas */
+    }
+
     footer .container-footer {
         width: 100%;
         display: grid;
@@ -2106,4 +2455,68 @@ button#send:hover {
         padding: 20px 40px 30px;
         line-height: 1.2em;
     }
+
+    /* Ajustes para pantallas de hasta 344px */
+@media (max-width: 346px) {
+    .sectionRow-programs {
+        flex-direction: column; /* Cambia la dirección a columna para el contenedor principal */
+    }
+
+    .programs-item {
+        display: flex; /* Usar flexbox para alinear imagen y texto */
+        flex-direction: row; /* Alinear imagen y texto en fila */
+        align-items: center; /* Centrar verticalmente los elementos */
+        margin: 10px 0; /* Añadir margen superior e inferior entre items */
+    }
+
+    .image-programs-row {
+        flex: 0 0 40%; /* Imagen ocupa el 40% del espacio */
+        max-height: 100px; /* Ajustar la altura máxima de la imagen */
+        overflow: hidden; /* Ocultar el desbordamiento de la imagen */
+    }
+
+    .programs-image {
+        width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+        height: auto; /* Mantener la proporción de la imagen */
+        object-fit: cover; /* Recortar la imagen si es necesario */
+    }
+
+    .contentWrapper-programs {
+        flex: 1; /* El texto ocupará el espacio restante */
+        padding: 10px; /* Espaciado interno reducido */
+    }
+
+    .programs-header h3 {
+        font-size: 16px; /* Tamaño de h3 */
+    }
+
+    .programs-header h2 {
+        font-size: 24px; /* Tamaño de h2 */
+    }
+
+    .programs-description p {
+        font-size: 10px; /* Tamaño de fuente */
+        line-height: 1.3; /* Mejora la legibilidad */
+        padding: 0 5px; /* Espaciado lateral reducido */
+    }
+
+    /* Ajustes para la lista de programas */
+    .programs-list {
+        display: flex; /* Usar flexbox */
+        overflow-x: auto; /* Permitir scroll horizontal */
+        padding: 10px 0; /* Espaciado vertical para la lista */
+        white-space: nowrap; /* Evitar que los elementos se envuelvan */
+    }
+
+    .programs-list li {
+        flex: 0 0 auto; /* Cada elemento ocupa su tamaño natural */
+        margin-right: 5px; /* Espacio entre elementos */
+        padding: 5px; /* Espaciado interno para mejor clicabilidad */
+    }
+
+    .programs-list li:last-child {
+        margin-right: 0; /* Elimina el margen del último elemento */
+    }
+}
+
 }
