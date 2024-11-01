@@ -53,11 +53,11 @@ btns.forEach((btn, i) => {
 });
 
 // Slider
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper(".swiper", {
     loop: true,
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
     slidesPerView: 1,
     spaceBetween: 10,
@@ -78,11 +78,11 @@ const swiper = new Swiper('.swiper', {
 });
 
 // FORMULARIO AGENDE SU CLASE
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
     // Función para enviar datos a WhatsApp
     function sendToWhatsApp(formId, phoneNumber, baseUrl) {
         const form = document.getElementById(formId);
-        form.addEventListener('submit', function (e) {
+        form.addEventListener("submit", function (e) {
             e.preventDefault();
             const name = document.getElementById(`${formId}-name`).value;
             const email = document.getElementById(`${formId}-email`).value;
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const url = `${baseUrl}?phone=${encodeURIComponent(phoneNumber)}&text=${encodeURIComponent(`Nombre: ${name}\nEmail: ${email}\nTelefono: ${phone}\nMensaje: ${message}\nAsunto: ${subject}`)}`;
 
-            window.open(url, '_blank');
+            window.open(url, "_blank");
         });
     }
 
@@ -123,78 +123,21 @@ const typed = new Typed(".multiple", {
 });
 
 
-// Datos de campeonatos
-const championships = [
-  {
-      event: 'Campeonato de Jiu Jitsu',
-      year: '2020',
-      belt: 'Cinturón Negro',
-      description: 'Descripción del campeonato 2020',
-      imgUrl: 'https://via.placeholder.com/100'
-  },
-  {
-      event: 'Campeonato Internacional',
-      year: '2022',
-      belt: 'Cinturón Verde',
-      description: 'Descripción del campeonato 2022',
-      imgUrl: 'https://via.placeholder.com/100'
-  },
-  {
-      event: 'Campeonato Local',
-      year: '2015',
-      belt: 'Cinturón Azul',
-      description: 'Descripción del campeonato 2015',
-      imgUrl: 'https://via.placeholder.com/100'
-  },
-];
+function filterByYear(year) {
+  // Selecciona todas las tarjetas de productos
+  const products = document.querySelectorAll('.product');
 
-// Función para mostrar las tarjetas en el DOM
-function displayChampionships(filterYear = 'all') {
-  const champCardsContainer = document.getElementById('champ-cards');
-  champCardsContainer.innerHTML = ''; // Limpiar el contenedor
-
-  championships.forEach(champ => {
-      // Si el filtro es 'all' o si el año de la tarjeta coincide con el filtro
-      if (filterYear === 'all' || champ.year === filterYear) {
-          const card = document.createElement('div');
-          card.className = 'champ-card-item';
-
-          card.innerHTML = `
-              <div class="champ-card-img">
-                  <img src="${champ.imgUrl}" alt="${champ.event}"/>
-              </div>
-              <div class="champ-card-content">
-                  <h4>${champ.event}</h4>
-                  <h3>${champ.year}</h3>
-                  <p>${champ.belt}</p>
-                  <div class="champ-card-tag">
-                      <p>${champ.description}</p>
-                  </div>
-              </div>
-          `;
-
-          champCardsContainer.appendChild(card); // Añadir la tarjeta al contenedor
+  products.forEach(product => {
+    // Muestra todas las tarjetas si se selecciona "all"
+    if (year === 'all') {
+      product.style.display = 'flex';
+    } else {
+      // Muestra solo las tarjetas que tienen la clase del año seleccionado
+      if (product.classList.contains(year)) {
+        product.style.display = 'flex';
+      } else {
+        product.style.display = 'none';
       }
+    }
   });
 }
-
-// Función para manejar el filtro de años
-function setupFilters() {
-  const filterItems = document.querySelectorAll('.champ-filter-item');
-
-  filterItems.forEach(item => {
-      item.addEventListener('click', () => {
-          const year = item.getAttribute('data-year');
-          displayChampionships(year); // Mostrar campeonatos filtrados
-      });
-  });
-}
-
-// Inicializar la página
-function init() {
-  displayChampionships(); // Mostrar todos los campeonatos al cargar la página
-  setupFilters(); // Configurar los filtros
-}
-
-// Ejecutar la función de inicialización
-init();

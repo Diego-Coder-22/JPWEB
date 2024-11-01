@@ -47,7 +47,7 @@
                     <h2>profesor</h2>
                 </div>
                 <div class="programs-description">
-                    <p> <br> <br> </p>
+                    <p> </p>
                 </div>
             </div>
         </div>
@@ -58,11 +58,11 @@
     <div class="bio">
         <h2>Biografía</h2>
         <p><strong>Juan Pedro Campos</strong> nació el 15 de septiembre de 1990 en Granada, una famosa ciudad situada en Andalucía, España. Desde muy pequeño, Juanpe fue un niño extremadamente activo y se dedicó a una variedad de deportes durante su infancia. Desde actividades más tradicionales como el fútbol, hasta artes marciales y deportes de combate. <br>
-        Su fascinación por los deportes llevó a Juanpe a practicar artes marciales, siendo su primera experiencia en deportes de combate el boxeo tailandés, una relación que comenzó cuando el nativo nazarí era apenas un adolescente. A partir del Muay Thai, Juanpe pasó a practicar artes marciales mixtas (MMA), encontrando el jiu-jitsu poco después de cumplir XX años. El maestro Mauro Henrique Bastos de Mello Jr. del Caveira Combat Team guió a Juanpe en su camino en el jiu-jitsu, apoyando su talento durante casi 3 años. En 2016, con la partida de Mauro de vuelta a Brasil, Juanpe continuó entrenando junto con sus compañeros en otro equipo de Granada.</p>
+        Su fascinación por los deportes llevó a Juanpe a practicar artes marciales, siendo su primera experiencia en deportes de combate el boxeo tailandés, una relación que comenzó cuando el nativo nazarí era apenas un adolescente. A partir del Muay Thai, Juanpe pasó a practicar artes marciales mixtas (MMA), encontrando el jiu-jitsu poco después de cumplir 22 años. El maestro Mauro Henrique Bastos de Mello Jr. del Caveira Combat Team guió a Juanpe en su camino en el jiu-jitsu, apoyando su talento durante casi 3 años. En 2016, con la partida de Mauro de vuelta a Brasil, Juanpe continuó entrenando junto con sus compañeros en otro equipo de Granada.</p>
         <p>A pesar de haber perdido a su maestro, Juanpe no dejó de entrenar y competir, lo que lo llevó a destacarse entre sus compañeros y a coronarse campeón en distintos torneos en los que participaba en España y también en Europa, soñando alguna vez con alcanzar el tan ansiado cinturón negro de jiu-jitsu.</p>
         <p>Ya con su cinturón morado en la cintura, siendo multicampeón en cinturón blanco y azul, Juanpe logra conocer a quien hoy es su maestro, Ray Pomares, cinturón negro 2 grados del equipo 7 Islands, equipo que recibió a Juanpe desde el primer día, colocándolo en el puesto de responsable de la sede 7 Islands en Granada. Es aquí donde Juanpe no solo demuestra su faceta como atleta, sino que también comienza a desempeñarse como profesor, sin dejar de competir y demostrando a sus alumnos cómo día a día se puede mejorar y alcanzar objetivos, logrando ser un referente dentro de su equipo y en la ciudad.
         </p>
-        <p>El 19 de mayo de 2024, Juan Pedro fue promovido a cinturón negro por el Maestro Ray Pomares González.</p>
+        <p>El 18 de mayo de 2024, Juan Pedro fue promovido a cinturón negro por el Maestro Ray Pomares González.</p>
     </div>
     <div class="bio-swiper-container swiper-container">
         <div class="bio-swiper-wrapper swiper-wrapper">
@@ -79,21 +79,104 @@
     <div id="championships" class="app-champ">
         <h1 class="champion-header-title">Campeonatos</h1>
         <div class="champ-filter">
-            <div class="champ-filter-item" data-year="all">Todos</div>
-            <div class="champ-filter-item" data-year="2015">2015</div>
-            <div class="champ-filter-item" data-year="2016">2016</div>
-            <div class="champ-filter-item" data-year="2017">2017</div>
-            <div class="champ-filter-item" data-year="2018">2018</div>
-            <div class="champ-filter-item" data-year="2020">2020</div>
-            <div class="champ-filter-item" data-year="2021">2021</div>
-            <div class="champ-filter-item" data-year="2022">2022</div>
+            <button class="champ-filter-item" onclick="filterByYear('all')">Todos</button>
+            <button class="champ-filter-item" onclick="filterByYear('2015')">2015</button>
+            <button class="champ-filter-item" onclick="filterByYear('2016')">2016</button>
+            <button class="champ-filter-item" onclick="filterByYear('2017')">2017</button>
+            <button class="champ-filter-item" onclick="filterByYear('2018')">2018</button>
+            <button class="champ-filter-item" onclick="filterByYear('2020')">2020</button>
+            <button class="champ-filter-item" onclick="filterByYear('2021')">2021</button>
+            <button class="champ-filter-item" onclick="filterByYear('2022')">2022</button>
         </div>
-        <div id="champ-cards" class="champ-cards"></div>
-    </div>
+        <div id="champ-cards" class="champ-cards">
+            <!-- Contenedor de campeonatos -->
+            <div class="products">
+                <!-- Campeonatos de 2015 -->
+                <div class="product 2015">
+                    <div class="image-container">
+                        <img src="../img/copa de europa 2015.jpg" alt="Campeonato 1">
+                        <div class="champ-card-tag">
+                            <p>1ro</p>
+                        </div>
+                    </div>
+                    <h3>Supercopa de Europa AEJJB</h3>
+                    <h4>2015</h4>
+                    <p>Blanco</p>
+                </div>
+              
+                <div class="product 2015">
+                    <div class="image-container">
+                        <img src="../img/open costa del sol 2015.jpg" alt="Campeonato 1">
+                        <div class="champ-card-tag">
+                            <p>1ro</p>
+                        </div>
+                    </div>
+                    <h3>Open Costa del Sol</h3>
+                    <h4>2015</h4>
+                    <p>Blanco</p>
+                </div>
+
+    <!-- Campeonatos de 2016 -->
+                <div class="product 2016">
+                    <div class="image-container">
+                        <img src="..//img/campeon españa  2016.jpg" alt="Campeonato 1">
+                        <div class="champ-card-tag">
+                            <p>1ro</p>
+                        </div>
+                    </div>
+                    <h3>Campeonato España 2016</h3>
+                    <h4>2016</h4>
+                    <p>Azul</p>
+                </div>
+                <div class="product 2016">
+                    <div class="image-container">
+                      <img src="../img/samurai 2016.jpg" alt="Campeonato">
+                      <div class="champ-card-tag">
+                        <p>1ro</p>
+                      </div>
+                    </div>
+                    <h3>Desafio Samurai AEJJB</h3>
+                    <h4>2016</h4>
+                    <p>Azul</p>
+                  </div>
+                <div class="product 2016">
+                    <div class="image-container">
+                        <img src="../img/liga andaluza 2016.jpg" alt="Campeonato 1">
+                        <div class="champ-card-tag">
+                            <p>2do</p>
+                        </div>
+                    </div>
+                    <h3>Liga Andaluza BJJ Grappling</h3>
+                    <h4>2016</h4>
+                    <p>Azul - Absoluto</p>
+                </div>
+                <div class="product 2016">
+                    <div class="image-container">
+                        <img src="../img/liga andaluza 2016.jpg" alt="Campeonato 1">
+                        <div class="champ-card-tag">
+                            <p>1ro</p>
+                        </div>
+                    </div>
+                    <h3>Liga Andaluza BJJ</h3>
+                    <h4>2016</h4>
+                    <p>Azul</p>
+                </div>
+                <div class="product 2016">
+                    <div class="image-container">
+                        <img src="../img/madrid-international-open-ibjjf-2016.jpg" alt="Campeonato 1">
+                        <div class="champ-card-tag">
+                            <p>2do</p>
+                        </div>
+                    </div>
+                    <h3>Open Madrid IBJJF</h3>
+                    <h4>2016</h4>
+                    <p>Azul</p>
+                </div>
+
+                    <!-- Más campeonatos para otros años... -->
+            </div>
+        </div>
 </section>
-
-
-
 
 <!-- Form Section -->
 <section class="section-form">

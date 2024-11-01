@@ -1728,7 +1728,6 @@ button#send:hover {
     min-height: 100vh;
     background-color: var(--white-color);
     padding: 50px;
-    margin-top: 30px;
 }
 
 .bio {
@@ -1798,9 +1797,10 @@ button#send:hover {
 
 .champ-filter {
     display: flex;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 20px;
 }
 
 .champ-filter-item {
@@ -1819,49 +1819,81 @@ button#send:hover {
     color: var(--white-color);
 }
 
-.champ-cards {
+.item-active{
+    background-color: rgb(218, 56, 56);
+    color: #000;
+}
+
+/* Contenedor de campeonatos usando Flexbox */
+.products {
     display: flex;
-    flex-direction: column;  /* Ajusta la dirección para que las tarjetas se apilen verticalmente */
-    align-items: center;     /* Centra las tarjetas */
-}
-
-.champ-card-item {
-    display: flex;
-    background: var(--white-color);
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    max-width: 300px; /* Establece un ancho máximo para las tarjetas */
-}
-
-.champ-card-img img {
-    width: 100px; /* Ajusta el tamaño de la imagen */
-    height: auto;
-    border-radius: 5px;
-    margin-right: 15px;
-}
-
-.champ-card-content {
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en varias filas */
+    gap: 20px; /* Espacio entre tarjetas */
+    justify-content: center; /* Centra las filas en el contenedor */
+  }
+  
+  /* Configuración de la tarjeta para que ocupe un tercio del contenedor */
+  .product {
     display: flex;
     flex-direction: column;
-}
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: calc(33.33% - 20px); /* Un tercio del ancho, menos el espacio entre tarjetas */
+    min-height: 350px;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+  }
+  
+  /* Contenedor de imagen y etiqueta */
+  .image-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  /* Imagen */
+  .image-container img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo de pestaña para campeonatos */
+  .champ-card-tag {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0px 30px;
+    background-color: var(--white-color);
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
 
-.champ-card-content h4 {
-    margin: 0;
-}
-
-.champ-card-content h3 {
+  /* Títulos y subtítulos */
+  .product h3 {
+    margin: 10px 0 5px;
+    font-size: 16px;
+    line-height: 1;
+  }
+  
+  .product h4 {
     margin: 5px 0;
-}
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .product p {
+    font-size: 16px;
+    color: #555;
+    margin:1px 0;
+  }
 
-.champ-card-tag {
-    margin-top: 10px;
-}
-
-.p-text {
-    margin-top: 10px;
-}
 
 @media (max-width: 1040px) {
 
