@@ -47,6 +47,7 @@ h6 {
   line-height: 115%;
 }
 
+
 /* - Buttons
 --------------------------------------------------------------*/
 .btn {
@@ -346,7 +347,7 @@ color: var(--white-color);
     padding: 50px;
     display: flex;
     flex-wrap: wrap; 
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 
 .row {
@@ -1869,7 +1870,7 @@ button#send:hover {
     transform: translateX(-50%);
     padding: 0px 30px;
     background-color: var(--white-color);
-    color: white;
+    color:var(--white-color);
     border-radius: 5px;
     font-weight: bold;
     white-space: nowrap;
@@ -1885,15 +1886,91 @@ button#send:hover {
   .product h4 {
     margin: 5px 0;
     font-size: 14px;
-    color: #666;
+    color:var(--primary-color);
   }
   
   .product p {
     font-size: 16px;
-    color: #555;
+    color: var(--primary-color);
     margin:1px 0;
   }
 
+  /* Estilos para la sección de preguntas frecuentes */
+.faq-section {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    background-color: var(--white-color);
+}
+
+.faq-content {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    gap: 2rem;
+    margin-top: 2rem;;
+}
+
+.faq-left {
+    flex: 1;
+    align-items: center;
+}
+
+.faq-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.faq-right img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    flex-shrink: 0;
+    margin-top:1rem ;
+}
+
+.faq-left h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color:var(--secundary-color);
+}
+
+.faq-item {
+    padding-bottom: 0.5rem;
+}
+
+.faq-question {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    color:var(--primary-color);
+    transition: color 0.3s;
+}
+
+.faq-question:hover {
+    color:var(--secundary-color);
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    background-color: var(--white-color);
+    border-top: 1px solid var(--white-color);
+}
+.faq-answer p{
+    font-size: 1rem;
+    line-height: 1.4
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
 
 @media (max-width: 1040px) {
 

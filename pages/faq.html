@@ -28,7 +28,7 @@
                 <a class="nav-link" href="./clases.html">CLASES</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">CONTACTO</a>
+                <a class="nav-link" href="./contacto.html">CONTACTO</a>
             </li>
             <li class="nav-item">
                 <a class="btn-navbar" href="./agende-clase.html">AGENDE SU CLASE</a>
@@ -41,61 +41,86 @@
         <div class="programs-page-content">
             <div class="programs-container">
                 <div class="programs-header">
-                    <h3>Pongase en</h3>
-                    <h2>Contacto</h2>
+                    <h3>Preguntas</h3>
+                    <h2>Frecuentes</h2>
                 </div>
             </div>  
-        <!-- Sección de contacto -->
-        <section class="contact-section">
-            <div class="contact-info">
-                <h2>Contacto</h2>
-                <ul class="contact-list">
-                    <li><i class="fab fa-whatsapp"></i> +34 658 10 44 82</li>
-                    <li><i class="fas fa-at"></i>juanpedro-_-90@hotmail.com</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Gimnasio Tijuana - La Zubia - Granada <br>Polígono EL LAUREL, C. de Desmond Tutu, 22</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Warrior Soul School - Zaidín - Granada <br>C. Roma, 2</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Niten Dojo - Beiro - Granada <br>Pl. de San Lázaro, 13, local 2</li>
-                </ul>
-                <div class="contact-hours">
-                    <h2>Horario</h2>
-                    <p><strong>Zaidin: </strong> <br>Lun Mie Vie <strong>10h a 11.30h y 16h a 17.30h</strong><br>Mar y Jue <strong>16h a 17h y 20.30h a 21.30h</strong><br><strong>La Zubia: </strong> <br>Lun Mie Vie <strong>19h a 20h </strong> <i>Avanzados</i><br>Lun y Mie <strong>18h a 19h</strong> <i>Iniciantes</i><br>Mar y Jue <strong>9.30h a 10.30h</strong><br><strong>San Lazaro: </strong> <br>Mar y Jue <strong>18.30h a 20h </strong><br>
+            <section class="faq-section">
+                <div class="faq-content">
+                    <div class="faq-left">
+                        <div class="faq-item">
+                            <button class="faq-question">Nunca entrene Jiu Jitsu ¿Puedo empezar a entrenar?</button>
+                            <div class="faq-answer">
+                                <p>Por supuesto, todo el tiempo llegan alumnos principiantes a las distintas academias y reciben un trato personalizado para que se integren lo antes posible.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">¿Debo estar bien fisicamente para comenzar a entrenar?</button>
+                            <div class="faq-answer">
+                                <p>No es necesario. Te pondrás en forma practicando Jiu Jitsu, no es necesario haber practicado ningún deporte ni arte marcial con anterioridad.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">¿Hay alguna edad para comenzar?</button>
+                            <div class="faq-answer">
+                                <p>Nunca es tarde para comenzar a hacer algo. Tenemos alumnos de todas las edades. El Jiu Jitsu es para absolutamente todos.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">¿Que ropa debo utilizar en las primeras clases?</button>
+                            <div class="faq-answer">
+                                <p>Ven con ropa de deporte cómoda si no tienes kimono. Recomendamos utilizar licra o rashguard debajo del kimono por higiene.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">¿Hay coste de Matricula?</button>
+                            <div class="faq-answer">
+                                <p>No. No tenemos ni matrículas ni permanencias. Incluso te invittamos a probar una clase.</p>
+                            </div>
+                        </div>
+                        <!-- Agrega más preguntas aquí si es necesario -->
+                    </div>
+                    <div class="faq-right">
+                        <img src="../img/todos_byn.JPG" alt="Imagen decorativa">
+                    </div>
                 </div>
+            </section>
+<!-- Form Section -->
+<section class="section-form">
+    <div class="form-container">
+        <h1>agende su clase</h1>
+        <h2>introductoria</h2>
+        <p>Únete para una experiencia de vida inolvidable.</p>
+
+        <!-- Botón de WhatsApp -->
+        <a href="https://wa.me/+34658104482?text=Me pongo en contacto contigo" target="_blank" class="whatsapp-button"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a>
+
+        <!-- Formulario -->
+        <form id="contact-form" action="process-form.php" method="POST">
+            <div>
+                <input type="text" id="contact-form-name" name="name" placeholder="Nombre" required>
             </div>
-            
-            <div class="contact-form">
-                <h2>Ponerse en Contacto</h2>
-                <form id="contact-form" action="#" method="post">
-                    <input type="text" id="contact-form-name" name="name" required placeholder="Nombre">
-                    <input type="email" id="contact-form-email" name="email" required placeholder="Email">
-                    <input type="tel" id="contact-form-phone" name="phone" required placeholder="Telefono">
-                    <textarea id="contact-form-message" name="message" rows="4" required placeholder="Mensaje"></textarea>
-                    <select id="contact-form-subject" name="subject" required>
-                        <option value="">Selecciona una opción</option>
-                        <option value="jiu_jitsu_adulto_ya_entreno">Jiu Jitsu Adulto, ya entreno en otro equipo.</option>
-                        <option value="jiu_jitsu_adulto_iniciante">Jiu Jitsu Adulto, soy iniciante y quiero aprender.</option>
-                        <option value="jiu_jitsu_infantil">Jiu Jitsu Infantil, quiero conocer el Jiu Jitsu.</option>
-                    </select>
-                    <button type="submit" id="send">Enviar</button>
-                </form>
-                
+            <div>
+                <input type="email" id="contact-form-email" name="email" placeholder="Email" required>
             </div>
-        </section>
-    
-        <!-- Sección de mapas -->
-        <section class="maps-section">
-            <div class="map">
-                <h3>La Zubia - Gimnasio Tijuana</h3>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3180.910206534071!2d-3.585178424681155!3d37.13105124898059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fb15ebca1905%3A0xc543b297088d8a3a!2sGimnasio%20Tijuana!5e0!3m2!1ses-419!2ses!4v1723549861336!5m2!1ses-419!2ses" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div>
+                <input type="tel" id="contact-form-phone" name="phone" placeholder="Telefono" required>
             </div>
-            <div class="map">
-                <h3>Zaidin - Warrior Soul School</h3>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6359.341832541901!2d-3.6004369246797676!3d37.16052374730633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fca117880a29%3A0xa2cf7970e6198de9!2sWarrior%20Soul%20School(Muay%20Thai)%20y%20(Brazilian%20Jiu%20jitsu)!5e0!3m2!1ses-419!2ses!4v1723549818042!5m2!1ses-419!2ses" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div>
+                <textarea id="contact-form-message" name="message" rows="4" placeholder="Mensaje" required></textarea>
             </div>
-            <div class="map">
-                <h3>Plaza de Toros - Niten Dojo</h3>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1589.288104087101!2d-3.6058855!3d37.1865412!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fd4aefd93027%3A0x72b764228bf923ad!2sNITEN%20dojo!5e0!3m2!1ses!2ses!4v1723549751028!5m2!1ses!2ses" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div>
+                <select id="contact-form-subject" name="subject" required>
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="jiu_jitsu_adulto_ya_entreno">Jiu Jitsu Adulto, ya entreno en otro equipo.</option>
+                    <option value="jiu_jitsu_adulto_iniciante">Jiu Jitsu Adulto, soy iniciante y quiero aprender.</option>
+                    <option value="jiu_jitsu_infantil">Jiu Jitsu Infantil, quiero conocer el Jiu Jitsu.</option>
+                </select>
             </div>
-        </section>
+            <button type="submit" id="send">Enviar</button>
+        </form>
+    </div>
+</section>
 
 <!-- Botón para volver arriba -->
 <button id="backToTopBtn" title="Ir arriba">
@@ -116,10 +141,10 @@
         <div class="sec quicklinks">
             <h2>Soporte</h2>
             <ul>
-                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="#">FAQ</a></li>
                 <li><a href="#">Politicas</a></li>
                 <li><a href="#">Ayuda</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
             </ul>
         </div>
         <div class="sec quicklinks">

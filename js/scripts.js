@@ -77,6 +77,13 @@ const swiper = new Swiper(".swiper", {
     }
 });
 
+document.querySelectorAll('.faq-question').forEach((button) => {
+    button.addEventListener('click', () => {
+        const faqItem = button.parentElement;
+        faqItem.classList.toggle('active');
+    });
+});
+
 // FORMULARIO AGENDE SU CLASE
 document.addEventListener("DOMContentLoaded", function () {
     // Función para enviar datos a WhatsApp
