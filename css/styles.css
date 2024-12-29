@@ -1681,15 +1681,56 @@ button#send:hover {
 }
 
 /* Contenido de academias: texto e imágenes */
+/* Estilos generales */
 .programs-content-academias {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* En dispositivos pequeños, las imágenes y los mapas se apilan */
+    align-items: center; /* Centrar el contenido */
+    text-align: center;
 }
+
 
 .programs-text .textWrapper-academias {
     font-size: 30px;
     font-weight: 400;
+    text-transform: uppercase;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-color);
+    gap: 10px;
+}
+.programs-text h3 {
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secundary-color);
+    gap: 10px;
+}
+
+
+.academia-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se acomoden al tamaño de la pantalla */
+    justify-content: center; /* Centra los elementos */
+    gap: 2rem; /* Espacio entre los contenedores */
+    margin-top: 2rem;
+}
+
+.academia-map-container {
+    display: flex;
+    flex-direction: column; /* Las imágenes deben estar encima de los mapas */
+    align-items: center;
+    width: 100%; /* Ocupa todo el ancho disponible en dispositivos móviles */
+    max-width: 400px; /* Limita el ancho en dispositivos grandes */
+}
+.map-container h3{
+    font-size: 30px;
+    font-weight: 600;
     text-transform: uppercase;
     font-style: italic;
     display: flex;
@@ -1699,21 +1740,19 @@ button#send:hover {
     gap: 15px;
 }
 
-/* Contenedor de imágenes de academias */
-.image-academias {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 20px;
+/* Imagen */
+.image-academia img {
+    width: 100%; /* Asegura que la imagen se ajuste correctamente */
+    height: 150px;
+    margin-bottom: 1rem; /* Espacio debajo de la imagen */
 }
 
-/* Estilo para cada imagen de academia */
-.image-academia {
-    width: 30%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+/* Mapa */
+.map-container iframe {
+    width: 100%; /* Ajusta el ancho del mapa */
+    height: 300px; /* Altura constante para los mapas */
+    border: 0;
+    margin-bottom: 15px;
 }
 
 /* Efecto hover en imágenes */
@@ -2289,6 +2328,7 @@ button#send:hover {
         margin-bottom: 1.2rem;
     }
 }
+
 
 @media (max-width: 768px) {
 
