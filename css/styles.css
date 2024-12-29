@@ -1976,6 +1976,37 @@ button#send:hover {
     display: block;
 }
 
+.pdp-section {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    background-color: var(--white-color);
+}
+
+.pdp-content {
+    max-width: 1200px;
+    width: 100%;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.pdp-content h3{
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.pdp-content h4{
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--secundary-color);
+    text-align: left;
+}
+.pdp-content p,ul{
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
 
 @media (max-width: 1040px) {
 
@@ -2233,9 +2264,31 @@ button#send:hover {
     .faq-left {
         order: 1; /* Las preguntas seguirán siendo las primeras en el flujo */
     }
+
+    .pdp-section {
+        padding: 1.5rem; /* Relleno intermedio para tabletas */
+    }
+
+    .pdp-content {
+        margin-top: 1.5rem;
+    }
+
+    .pdp-content h3 {
+        font-size: 1.4rem; /* Ajustar tamaño de fuente */
+        margin-bottom: 1.2rem;
+    }
+
+    .pdp-content h4 {
+        font-size: 1.6rem; /* Ajustar tamaño de fuente */
+        margin-bottom: 1.3rem;
+    }
+
+    .pdp-content p, ul {
+        font-size: 1.05rem; /* Ajustar tamaño de fuente */
+        line-height: 1.45rem;
+        margin-bottom: 1.2rem;
+    }
 }
-
-
 
 @media (max-width: 768px) {
 
@@ -2498,6 +2551,30 @@ button#send:hover {
     .faq-right img {
         width: 90%;
         margin: 0 auto;
+    }
+
+    .pdp-section {
+        padding: 1rem; /* Menos relleno para pantallas pequeñas */
+    }
+
+    .pdp-content {
+        margin-top: 1rem;
+    }
+
+    .pdp-content h3 {
+        font-size: 1.3rem; /* Reducir tamaño de fuente */
+        margin-bottom: 1rem;
+    }
+
+    .pdp-content h4 {
+        font-size: 1.5rem; /* Reducir tamaño de fuente */
+        margin-bottom: 1.2rem;
+    }
+
+    .pdp-content p, ul {
+        font-size: 1rem; /* Reducir tamaño de fuente */
+        line-height: 1.4rem;
+        margin-bottom: 1rem;
     }
 
     footer{
