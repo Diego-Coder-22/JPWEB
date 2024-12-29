@@ -1772,14 +1772,15 @@ button#send:hover {
 }
 
 .swiper-slide img {
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    height: auto;
     object-fit: contain;
 }
 .champions {
     background-color: var(--white-color);
     max-width: 100%;
-    margin: auto;
+    margin: 0 auto; /* Centra la imagen dentro del contenedor */
+    display: block;
 }
 
 .app-champ {
@@ -2187,6 +2188,29 @@ button#send:hover {
     .container-kids {
         grid-template-columns: repeat(2, 1fr); /* Dos columnas en max 1040px */
     }
+
+    .bio-swiper {
+        grid-template-columns: 1fr 1fr; /* Dos columnas */
+        gap: 1.5rem;
+        padding: 30px;
+    }
+
+    .bio-swiper-container {
+        max-width: 90%;
+        min-height: auto;
+    }
+
+    .products {
+        gap: 15px;
+    }
+
+    .product {
+        width: calc(50% - 15px); /* Dos tarjetas por fila */
+    }
+
+    .champ-filter-item {
+        font-size: 18px; /* Ajusta el tamaño de los botones */
+    }
 }   
 
 
@@ -2404,6 +2428,39 @@ button#send:hover {
         font-size: 1.5rem; /* Aún más pequeño para dispositivos móviles */
     }
 
+    .bio-swiper {
+        grid-template-columns: 1fr; /* Una sola columna */
+        gap: 1rem;
+        padding: 20px;
+    }
+
+    .bio h2 {
+        font-size: 2rem; /* Reducir el tamaño del título */
+    }
+
+    .bio p {
+        font-size: 12px; /* Reducir el tamaño del texto */
+    }
+
+    .bio-swiper-container {
+        max-width: 100%;
+        min-height: auto; /* Elimina la altura fija */
+    }
+
+    .products {
+        gap: 10px; /* Reduce el espacio entre tarjetas */
+    }
+
+    .product {
+        width: 100%; /* Una tarjeta por fila */
+        min-height: auto; /* Altura adaptable */
+    }
+
+    .champ-filter-item {
+        font-size: 16px; /* Reduce el tamaño de los botones */
+    }
+}
+
     footer{
         padding: 40px;
     }
@@ -2414,9 +2471,6 @@ button#send:hover {
         grid-template-columns: repeat(2,1fr);
         grid-gap: 40px;
     }  
-
-
-}
 
 @media (max-width:575px) {
 
