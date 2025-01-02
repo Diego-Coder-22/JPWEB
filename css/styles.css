@@ -1742,8 +1742,10 @@ button#send:hover {
 
 /* Imagen */
 .image-academia img {
-    width: 100%; /* Asegura que la imagen se ajuste correctamente */
-    height: 150px;
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    display: block; /* Necesario para que el margin funcione correctamente */
+    width: 60%; /* Asegura que la imagen se ajuste correctamente */
+    height: auto;
     margin-bottom: 1rem; /* Espacio debajo de la imagen */
 }
 
@@ -2901,6 +2903,15 @@ button#send:hover {
     .section-kids {
         text-align: left; /* Centrar texto para pantallas pequeñas */
     }
+
+    .image-academia img {
+        margin: 0 auto; /* Centra la imagen horizontalmente */
+        display: block; /* Necesario para que el margin funcione correctamente */
+        width: 50%; /* Asegura que la imagen se ajuste correctamente */
+        height: auto;
+        margin-bottom: 1rem; /* Espacio debajo de la imagen */
+    }
+
 
 /* Estilo para las secciones */
 .section-kids {
