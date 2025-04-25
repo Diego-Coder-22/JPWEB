@@ -26,15 +26,6 @@ body {
     line-height: 164%;
     letter-spacing: 0.32px;
   }
-
-  body.hidden {
-    opacity: 0;
-    transition: opacity 1s ease;
-}
-body.visible {
-    opacity: 1;
-}
-
  /* p {
     color:rgba(253, 253, 253, 0);
     text-shadow: 5px 4px 3px black;
@@ -54,32 +45,6 @@ h6 {
   font-weight: 700;
   letter-spacing: 0.84px;
   line-height: 115%;
-}
-/* Loading */
-#spinner {
-    position: fixed;
-    inset: 0;
-    background-color: black;
-    z-index: 99999999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-#spinner img {
-    pointer-events: none;
-    animation: spin 1s cubic-bezier(0.215, 0.610, 0.355, 1) infinite;
-    width: 80px;
-    height: 80px;
-}
-
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    } to {
-        transform: rotate(360deg);
-    }
 }
 
 
