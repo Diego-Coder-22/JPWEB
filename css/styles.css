@@ -512,6 +512,9 @@ color: var(--white-color);
     filter: brightness(0.5);
     border-color: var(--primary-color);
 }
+.card img:hover {
+    filter: brightness(1);
+}
 
 .card-body {
     position: absolute;
@@ -542,7 +545,7 @@ color: var(--white-color);
     color: var(--secundary-color);
 }
 
-.card h3:hover {
+.card h3:hover,.card-body p:hover {
     transform: scale(0.9);
 }
 
@@ -654,6 +657,7 @@ color: var(--white-color);
   .image-section-equipo img:hover {
     transform: scale(1.1);
     transition: 0.3s;
+    filter: brightness(1);
   }
 
   .section-horarios {
@@ -1256,6 +1260,7 @@ button#send:hover {
 .programs-image:hover {
     transform: scale(1.05); /* Efecto de zoom */
     filter: brightness(1);
+    cursor: pointer;
 }
 
 
@@ -1353,6 +1358,7 @@ button#send:hover {
 .image-clases-row img:hover {
     transform: scale(1.05); /* Efecto de zoom */
     filter: brightness(1.);
+    cursor: pointer;
 }
 
 .container-program {
@@ -2738,11 +2744,11 @@ button#send:hover {
     }
 
     .content-equipo {
-        padding: 20px;
+        padding: 0px;
     }
 
     .text-section-equipo {
-        padding: 10px;
+        padding: 0px;
     }
 
     .text-section-equipo h2 {
